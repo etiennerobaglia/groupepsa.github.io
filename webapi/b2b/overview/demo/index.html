@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Try it Out! | Overview | Webapi B2B</title>
+    <!-- OPEN GRAPH -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Try it Out! | Overview | Webapi B2B">
+    <meta property="og:url" content="https://developer.groupe-psa.io/webapi/b2b/overview/demo/">
+    <meta property="og:image" content="https://developer.groupe-psa.io/assets/images/logo-groupe-psa.jpg" />
+    <meta property="og:site_name" content="Stellantis for Developers">
+    <meta property="og:description" content="Interactive demo of Stellantis API for fleet owner for ex Groupe PSA brands (Citroën, DS, Peugeot, Opel and Vauxhall).">
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Try it Out! | Overview | Webapi B2B">
+    <meta name="twitter:description" content="Interactive demo of Stellantis API for fleet owner for ex Groupe PSA brands (Citroën, DS, Peugeot, Opel and Vauxhall).">
+    <meta name="twitter:card" content="summary">
+    <meta itemprop="description" name="description" content="Interactive demo of Stellantis API for fleet owner for ex Groupe PSA brands (Citroën, DS, Peugeot, Opel and Vauxhall)." />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <link rel="canonical" href="https://developer.groupe-psa.io/webapi/b2b/overview/demo/">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <!-- FONTs -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"><link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700&family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+    <!-- COMPONENTs CSS -->
+    <link rel="stylesheet" href="/assets/css/modules/webapi-demo.css">
+    <!-- LIBRARIEs -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+    <!-- SCRIPTs-->
+    <script src="/assets/js/dropdown.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+    <!-- Matomo-->
+    <script type="text/javascript" language="Javascript" src="/assets/js/tag_piwik_PG4D_DOC_id_550.js"></script>
+    <!-- End Matomo Code -->
+
+<body>
+    <section class="hero hero-header is-medium hero_api">
+        <div class="hero-head">
+            <nav aria-label="main navigation" class="navbar is-fixed-top" id="navbarpsa" role="navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+            <div id="logoPG4D">
+                <img alt="logo-pg4d" src="/assets/images/logo-pg4d.svg">
+            </div>
+        </a>
+        <a aria-expanded="false" aria-label="menu" class="navbar-burger" data-target="navMenu" role="button">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+    <div class="navbar-menu" id="navMenu">
+        <div class="navbar-start">
+            
+                
+                <div class="navbar-item menu has-dropdown is-hoverable">
+                    <a class="textnavbar navbar-link " href="/connected-vehicles/">
+                        <span class="icon is-large is-white">
+                            <i class="fas fa-wifi"></i>
+                        </span>
+                        <span class="section-name">
+                            Connected&nbsp;<br class='is-hidden-touch'>Vehicles
+                        </span>
+                    </a>
+                    <div class="navbar-dropdown" id="dropdownAPI">
+                        <p href="/connected-vehicles/#article" class="navbar-item dropdown-title " id="overview" onclick="navClick(document.getElementById('overview'), 'overview');">
+                                <span>
+                                    OVERVIEW
+                                </span>
+                                <span>
+                                    <svg class="arrow arrow-right" version="1.1" viewBox="0 0 24 24" x="0" xmlns="http://www.w3.org/2000/svg" y="0" aria-hidden="true"><polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon>
+                                    </svg>
+                                </span>
+                            </p>
+                            
+                            <a id="overview" class=" navbar-item " href="/connected-vehicles/about/#article">
+                                            About
+                                        </a>
+                                    <a id="overview" class=" navbar-item " href="/connected-vehicles/access-requirements/#article">
+                                            Access Requirements
+                                        </a>
+                                    <a id="overview" class=" navbar-item " href="/connected-vehicles/privacy/#article">
+                                            Privacy Settings
+                                        </a>
+                                    <a id="overview" class=" navbar-item " href="/connected-vehicles/remotes/#article">
+                                            Remotes Control
+                                        </a>
+                                    <a id="overview" class=" navbar-item " href="/connected-vehicles/monitors/#article">
+                                            Monitoring & Notification
+                                        </a>
+                                    <a id="overview" class=" navbar-item " href="/connected-vehicles/data-catalog/#article">
+                                            Data Catalog
+                                        </a>
+                                    </div>
+                </div>
+                
+            
+                
+                <div class="navbar-item menu has-dropdown is-hoverable">
+                    <a class="textnavbar navbar-link is-active" href="/webapi/">
+                        <span class="icon is-large is-white">
+                            <i class="fas fa-cloud"></i>
+                        </span>
+                        <span class="section-name">
+                            Web&nbsp;<br class='is-hidden-touch'>API
+                        </span>
+                    </a>
+                    <div class="navbar-dropdown" id="dropdownAPI">
+                        <p href="/webapi/b2b/#article" class="navbar-item dropdown-title is-default is-active" id="b2b" onclick="navClick(document.getElementById('b2b'), 'b2b');">
+                                <span>
+                                    FLEET OWNER
+                                </span>
+                                <span>
+                                    <svg class="arrow arrow-down" version="1.1" viewBox="0 0 24 24" x="0" xmlns="http://www.w3.org/2000/svg" y="0" aria-hidden="true"><polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon>
+                                    </svg>
+                                </span>
+                            </p>
+                            
+                            <a id="b2b" class=" is-default-subsection  navbar-item is-active" href="/webapi/b2b/overview/about/#article">
+                                        Overview
+                                    </a><a id="b2b" class=" is-default-subsection  navbar-item " href="/webapi/b2b/quickstart/authentication/#article">
+                                        Quickstart
+                                    </a><a id="b2b" class=" is-default-subsection  navbar-item " href="/webapi/b2b/monitor/about/#article">
+                                        Monitor
+                                    </a><a id="b2b" class=" is-default-subsection  navbar-item " href="/webapi/b2b/remote/about/#article">
+                                        Remote
+                                    </a><a id="b2b" class=" is-default-subsection  navbar-item " href="/webapi/b2b/api-reference-v2/specification/#article">
+                                        API Reference v2
+                                    </a><a id="b2b" class=" is-default-subsection  navbar-item " href="/webapi/b2b/api-reference-v3/specification/#article">
+                                        API Reference v3
+                                    </a><hr class="navbar-divider"><p href="/webapi/b2c/#article" class="navbar-item dropdown-title " id="b2c" onclick="navClick(document.getElementById('b2c'), 'b2c');">
+                                <span>
+                                    END USER
+                                </span>
+                                <span>
+                                    <svg class="arrow arrow-right" version="1.1" viewBox="0 0 24 24" x="0" xmlns="http://www.w3.org/2000/svg" y="0" aria-hidden="true"><polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon>
+                                    </svg>
+                                </span>
+                            </p>
+                            
+                            <a id="b2c" class=" navbar-item " href="/webapi/b2c/overview/about/#article">
+                                        Overview
+                                    </a><a id="b2c" class=" navbar-item " href="/webapi/b2c/quickstart/connect/#article">
+                                        Quickstart
+                                    </a><a id="b2c" class=" navbar-item " href="/webapi/b2c/monitor/about/#article">
+                                        Monitor
+                                    </a><a id="b2c" class=" navbar-item " href="/webapi/b2c/api-reference/specification/#article">
+                                        API Reference
+                                    </a></div>
+                </div>
+                
+            
+                
+                <div class="navbar-item menu has-dropdown is-hoverable">
+                    <a class="textnavbar navbar-link " href="/webportal/">
+                        <span class="icon is-large is-white">
+                            <i class="fas fa-car-side"></i>
+                        </span>
+                        <span class="section-name">
+                            Embedded&nbsp;<br class='is-hidden-touch'>Webportal
+                        </span>
+                    </a>
+                    <div class="navbar-dropdown" id="dropdownAPI">
+                        <p href="/webportal/v1/#article" class="navbar-item dropdown-title " id="v1" onclick="navClick(document.getElementById('v1'), 'v1');">
+                                <span>
+                                    VERSION 1
+                                </span>
+                                <span>
+                                    <svg class="arrow arrow-right" version="1.1" viewBox="0 0 24 24" x="0" xmlns="http://www.w3.org/2000/svg" y="0" aria-hidden="true"><polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon>
+                                    </svg>
+                                </span>
+                            </p>
+                            
+                            <a id="v1" class=" navbar-item " href="/webportal/v1/overview/about/#article">
+                                        Overview
+                                    </a><a id="v1" class=" navbar-item " href="/webportal/v1/application/quickstart/#article">
+                                        Application
+                                    </a><a id="v1" class=" navbar-item " href="/webportal/v1/advanced-features/mqtt/#article">
+                                        Advanced Features
+                                    </a><a id="v1" class=" navbar-item " href="/webportal/v1/api-reference/list/#article">
+                                        API Reference
+                                    </a><hr class="navbar-divider"><p href="/webportal/v2/#article" class="navbar-item dropdown-title " id="v2" onclick="navClick(document.getElementById('v2'), 'v2');">
+                                <span>
+                                    VERSION 2
+                                </span>
+                                <span>
+                                    <svg class="arrow arrow-right" version="1.1" viewBox="0 0 24 24" x="0" xmlns="http://www.w3.org/2000/svg" y="0" aria-hidden="true"><polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon>
+                                    </svg>
+                                </span>
+                            </p>
+                            
+                            <a id="v2" class=" navbar-item " href="/webportal/v2/overview/about/#article">
+                                        Overview
+                                    </a><a id="v2" class=" navbar-item " href="/webportal/v2/application/quickstart/#article">
+                                        Application
+                                    </a><a id="v2" class=" navbar-item " href="/webportal/v2/api-reference/list/#article">
+                                        API Reference
+                                    </a></div>
+                </div>
+                
+            
+                
+                <div class="navbar-item menu has-dropdown is-hoverable">
+                    <a class="textnavbar navbar-link " href="/mobile-sdk/">
+                        <span class="icon is-large is-white">
+                            <i class="fas fa-mobile"></i>
+                        </span>
+                        <span class="section-name">
+                            Mobile&nbsp;<br class='is-hidden-touch'>SDK
+                        </span>
+                    </a>
+                    <div class="navbar-dropdown" id="dropdownAPI">
+                        
+                            <a id="" class=" navbar-item " href="/mobile-sdk/overview/about/#article">
+                                        Overview
+                                    </a><a id="" class=" navbar-item " href="/mobile-sdk/security/security-schemes/#article">
+                                        Security
+                                    </a><a id="" class=" navbar-item " href="/mobile-sdk/sdk-features/trips/#article">
+                                        SDK Features
+                                    </a><a id="" class=" navbar-item " href="/mobile-sdk/references/v2-2/#article">
+                                        API Reference
+                                    </a></div>
+                </div>
+                
+            
+                
+            
+        </div>
+        <!-- SEARCH -->
+        <div class="navbar-end">
+            <div class="textnavbar navbar-item menu">
+                <form  action="/search/" method="get">
+                    <div class="field" id="search-input">
+                        <p class="control has-icons-left">
+                            <input type="text" class="input" id="lunrsearch_redirect" name="q" maxlength="255" value="" placeholder="Search" />
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-search" ></i>
+                            </span>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</nav>
+<script>
+
+// MENU FIX
+
+
+var mq = window.matchMedia( "(max-width: 1088px)" );
+
+var currentNavMenu = document.querySelector("#navbarpsa #dropdownAPI  > .dropdown-title.is-default.is-active");
+
+var currentNavSubMenu = document.querySelectorAll("#navbarpsa #dropdownAPI  > .navbar-item.is-default-subsection");
+
+function navClick (clickedNavMenu, id) {
+    if (mq.matches) {
+        if (currentNavMenu == clickedNavMenu) {
+            currentNavMenu.classList.remove("is-active");
+            currentNavMenu.querySelector("svg").classList.replace("arrow-down", "arrow-right");
+            currentNavSubMenu.forEach(element => {
+                element.style.display = "none";
+            });
+            currentNavSubMenu = null;
+            currentNavMenu = null;
+        }
+        else {
+            if (currentNavMenu){
+                currentNavMenu.querySelector("svg").classList.replace("arrow-down", "arrow-right");
+                currentNavMenu.classList.remove("is-active");
+                currentNavSubMenu.forEach(element => {
+                    element.style.display = "none";
+                });
+            }
+            clickedNavMenu.querySelector("svg").classList.replace("arrow-right", "arrow-down");
+            clickedNavMenu.classList.add("is-active");
+            currentNavSubMenu = document.querySelectorAll("#navbarpsa #dropdownAPI  > .navbar-item#"+id+":not(.dropdown-title)");
+            currentNavSubMenu.forEach(element => {
+                element.style.display = "block";
+            });
+            currentNavMenu = clickedNavMenu;
+        }
+    }
+}
+
+// Display navbar is-fixed-top navbar
+if (mq.matches) {
+    document.getElementById("navbarpsa").classList.add("bluenavbar");
+}
+else {
+    
+    window.onscroll = function() {scrollFunction()};
+    
+    
+    function scrollFunction() {
+        if (document.body.scrollTop > 96 || document.documentElement.scrollTop > 96) {
+            document.getElementById("navbarpsa").classList.add("bluenavbar");
+        } else {
+            document.getElementById("navbarpsa").classList.remove("bluenavbar");
+        }
+    } 
+}
+</script>
+
+        </div>
+        
+        <div class="hero-body">
+            <div class="container">
+            
+            <h1 class="title section-title">WEB API</h1>
+            <h2 class="title">for fleet owner</h2>
+            
+            </div>
+        </div>
+        
+    </section><section id="article">
+  <div class="columns is-gapless"><main class="column content-column">
+      <div class="content">
+        
+
+<div class="content-header" >
+    <div class="page-title-container"><h1 id="page-title">
+        
+            <span>
+                
+                    Overview - 
+                
+                    Try it Out!
+            </span>
+        
+        </h1>
+        <div class="menu-select"> 
+            <div class="select page-select">
+                <select>
+                            
+                                    
+
+                                        
+                                            
+
+                                                <optgroup label="Overview">
+                                                    
+
+                                                        
+
+                                                        <option 
+                                                            value="/webapi/b2b/overview/about/#article" 
+                                                            >
+                                                                About
+                                                        </option>
+
+                                                    
+
+                                                        
+
+                                                        <option 
+                                                            value="/webapi/b2b/overview/standards/#article" 
+                                                            >
+                                                                Standards
+                                                        </option>
+
+                                                    
+
+                                                        
+
+                                                        <option 
+                                                            value="/webapi/b2b/overview/errors/#article" 
+                                                            >
+                                                                Errors & Rate Limit
+                                                        </option>
+
+                                                    
+
+                                                        
+
+                                                        <option 
+                                                            value="/webapi/b2b/overview/demo/#article" 
+                                                            selected>
+                                                                Try it Out!
+                                                        </option>
+
+                                                    
+
+                                                        
+
+                                                        <option 
+                                                            value="/webapi/b2b/overview/about-versions/#article" 
+                                                            >
+                                                                About Versions
+                                                        </option>
+
+                                                    
+
+                                                        
+
+                                                        <option 
+                                                            value="/webapi/b2b/overview/data-scope/#article" 
+                                                            >
+                                                                Data Scope
+                                                        </option>
+
+                                                    
+                                                </optgroup>
+                                            
+                                        
+                                            
+
+                                                <optgroup label="Quickstart">
+                                                    
+
+                                                        
+
+                                                        <option 
+                                                            value="/webapi/b2b/quickstart/authentication/#article" 
+                                                            >
+                                                                Authentication
+                                                        </option>
+
+                                                    
+
+                                                        
+
+                                                        <option 
+                                                            value="/webapi/b2b/quickstart/examples/#article" 
+                                                            >
+                                                                Examples
+                                                        </option>
+
+                                                    
+                                                </optgroup>
+                                            
+                                        
+                                            
+
+                                                <optgroup label="Monitor">
+                                                    
+
+                                                        
+
+                                                        <option 
+                                                            value="/webapi/b2b/monitor/about/#article" 
+                                                            >
+                                                                About
+                                                        </option>
+
+                                                    
+
+                                                        
+
+                                                        <option 
+                                                            value="/webapi/b2b/monitor/set-up/#article" 
+                                                            >
+                                                                Set Up
+                                                        </option>
+
+                                                    
+
+                                                        
+
+                                                        <option 
+                                                            value="/webapi/b2b/monitor/retry-policy/#article" 
+                                                            >
+                                                                Retry Policy
+                                                        </option>
+
+                                                    
+
+                                                        
+
+                                                        <option 
+                                                            value="/webapi/b2b/monitor/webhook-v2/#article" 
+                                                            >
+                                                                Webhook References v2
+                                                        </option>
+
+                                                    
+
+                                                        
+
+                                                        <option 
+                                                            value="/webapi/b2b/monitor/webhook-v3/#article" 
+                                                            >
+                                                                Webhook References v3
+                                                        </option>
+
+                                                    
+                                                </optgroup>
+                                            
+                                        
+                                            
+
+                                                <optgroup label="Remote">
+                                                    
+
+                                                        
+
+                                                        <option 
+                                                            value="/webapi/b2b/remote/about/#article" 
+                                                            >
+                                                                About
+                                                        </option>
+
+                                                    
+
+                                                        
+
+                                                        <option 
+                                                            value="/webapi/b2b/remote/set-up/#article" 
+                                                            >
+                                                                Set Up
+                                                        </option>
+
+                                                    
+
+                                                        
+
+                                                        <option 
+                                                            value="/webapi/b2b/remote/retry-policy/#article" 
+                                                            >
+                                                                Retry Policy
+                                                        </option>
+
+                                                    
+
+                                                        
+
+                                                        <option 
+                                                            value="/webapi/b2b/remote/notifications-errors/#article" 
+                                                            >
+                                                                Notifications and Errors
+                                                        </option>
+
+                                                    
+
+                                                        
+
+                                                        <option 
+                                                            value="/webapi/b2b/remote/webhook/#article" 
+                                                            >
+                                                                Webhook References
+                                                        </option>
+
+                                                    
+                                                </optgroup>
+                                            
+                                        
+                                            
+
+                                                <optgroup label="API Reference v2">
+                                                    
+
+                                                        
+
+                                                        <option 
+                                                            value="/webapi/b2b/api-reference-v2/specification/#article" 
+                                                            >
+                                                                Specification Version 2
+                                                        </option>
+
+                                                    
+
+                                                        
+
+                                                        <option 
+                                                            value="/webapi/b2b/api-reference-v2/changelog/#article" 
+                                                            >
+                                                                Changelog Version 2
+                                                        </option>
+
+                                                    
+                                                </optgroup>
+                                            
+                                        
+                                            
+
+                                                <optgroup label="API Reference v3">
+                                                    
+
+                                                        
+
+                                                        <option 
+                                                            value="/webapi/b2b/api-reference-v3/specification/#article" 
+                                                            >
+                                                                Specification Version 3
+                                                        </option>
+
+                                                    
+
+                                                        
+
+                                                        <option 
+                                                            value="/webapi/b2b/api-reference-v3/changelog/#article" 
+                                                            >
+                                                                Changelog Version 3
+                                                        </option>
+
+                                                    
+                                                </optgroup>
+                                            
+                                        </select>
+            </div>
+        </div><div class="is-flex is-justify-content-center is-align-items-baseline">
+        
+        <a 
+            
+            href="https://github.com/GroupePSA/groupepsa.github.io/tree/master/webapi/b2b-demo.html"
+             
+            class="button is-small edit-page icon-button is-outlined is-pulled-right" 
+            target="_blank" 
+            title="Edit this page on GitHub">
+                <span class="icon">
+                    <i  class="fab fa-github"></i> 
+                </span>
+                <span class="edit-page-text">
+                    Edit
+                </span>
+        </a>
+        
+    
+    </div></div><nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/webapi/">Web API</a>
+            </li>
+            
+            
+            <li>
+                <a href="/webapi/b2b/">Fleet Owner</a>
+            </li>
+            
+            
+            <li>
+                <a href="/webapi/b2b/overview/">Overview</a>
+            </li>
+            
+            <li>
+                <a href="#article" aria-current="page">
+                    Try it Out!
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="notification page-disclaimer">
+      <strong>Info:</strong> Stellantis Fleet Owner API for ex Groupe PSA brands (Citroën, DS, Peugeot, Opel and Vauxhall) is made for organisations owning <strong>fleet of vehicles</strong>.
+    </div>
+    </div>
+
+<script>
+
+    function selectPage(e){
+        
+    }
+
+    document.querySelector(".page-select").addEventListener("change", (e) => {
+        window.location.href = ""+e.target.value;
+    });
+
+
+</script>
+        
+        <!-- SCRIPT DEMO -->
+<script>
+  var map = null;
+  var vehicle = null;
+
+  window.onload = function () {
+
+    //init LEAFLET
+    //set view on velizy
+    var lat = 48.7712;
+    var lon = 2.2263;
+
+    //create map and insert into map html id
+    map = L.map('map', { zoomControl: false }).setView([lat, lon], 15);
+    //openstreetmap maps adress
+    L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+      //set credit to OSM
+      attribution: 'data © <a href="//osm.org/copyright">OpenStreetMap</a>/ODbL - <a href="//openstreetmap.fr">OSM France</a>',
+      minZoom: 1,
+      maxZoom: 20,
+    }).addTo(map);
+  };
+
+
+  function fetchStatus() {
+
+    // Status example json block
+    document.querySelector("#emptyPayload").style.display = 'none';
+    document.querySelector("#statusPayload").style.display = '';
+
+    //add marker on map
+    vehicle = L.marker([48.772476, 2.2221432]).addTo(map);
+    //set map view on marker
+    map.setView([48.772476, 2.2221432]);
+
+    //switch buttons
+    document.querySelector("#buttonStatusGrey").style.display = '';
+    document.querySelector("#buttonStatusColor").style.display = 'none';
+
+    document.querySelector("#buttonVehicleGrey").style.display = 'none';
+    document.querySelector("#buttonVehicleColor").style.display = '';
+    
+    // bring you to fetch vehicle
+    window.location.href = "#buttonVehicleColor";
+  }
+
+  function fetchVehicle() {
+
+    // Vehicle example json block
+    document.querySelector("#statusPayload").style.display = 'none';
+    document.querySelector("#vehicleIdPayload").style.display = '';
+
+    //add popup to marker with vehicle info
+    vehicle.bindPopup('<img class="image" src="/assets/images/508.png" alt="No Image Available"><p><b>Id: </b>XA143Z2<br><b> Vin: </b>VF3A12BCDEF3456<br><b>Brand: </b>Peugeot<br><b>Label: </b>508 II BlueHDi 130ch Allure<br> <b> LastPosition:</b> <a href="/connectedcar/v3/fleets/{fid}/vehicles/{id}/lastPosition">href</a></p>').openPopup();
+    //set map view above the marker
+    map.setView([48.7775, 2.22232]);
+
+    //switch buttons
+    document.querySelector("#buttonVehicleGrey").style.display = '';
+    document.querySelector("#buttonVehicleColor").style.display = 'none';
+
+    document.querySelector("#buttonReloadGrey").style.display = 'none';
+    document.querySelector("#buttonReloadColor").style.display = '';
+
+    // bring you to reload
+    window.location.href = "#buttonReloadColor";
+  }
+
+  function reload() {
+    window.location.href = "#demoTitle";
+    window.location.reload(true);
+  }
+
+</script>
+
+<div class="content">
+      <h1 id="demoTitle">
+        <span class="bd-anchor-name">
+        
+          
+    <span>
+      Click on the API buttons and retrieve related info 👇                     
+    </span>          
+  
+                  </span>
+ <a href="#demoTitle" class="bd-anchor-link">#</a>
+        
+        
+      </h1>
+
+  <!-- status api BUTTON COLOR-->
+  <a class="colortags tags has-addons " onclick="fetchStatus()" id="buttonStatusColor">
+    <span class="tag_endpoint_large tag is-white">
+      <span class="verb get">GET
+        /fleets/{fid}/vehicles/{id}/status</span>https://api-cert.groupe-psa.com/connectedcar/{version}/fleets/{fid}/vehicles/{id}/status
+    </span>
+  </a>
+  <!-- status api BUTTON GREY-->
+  <div class="greytags tags has-addons" id="buttonStatusGrey" style="display: none">
+    <span class="greyUrl tag_endpoint_large tag">
+      <span class="verb get greyGet">GET
+        /fleets/{fid}/vehicles/{id}/status</span>https://api-cert.groupe-psa.com/connectedcar/{version}/fleets/{fid}/vehicles/{id}/status
+    </span>
+  </div>
+  <!-- vehicle api BUTTON COLOR -->
+  <div id="buttonVehicleColor" style="display: none">
+    <a class="colortags tags has-addons" onclick="fetchVehicle()" >
+      <span class="tag_endpoint_large tag is-white">
+        <span class="verb get">
+          GET
+          /fleets/{fid}/vehicles/{id}</span>https://api-cert.groupe-psa.com/connectedcar/{version}/fleets/{fid}/vehicles/{id}
+      </span>
+    </a>
+  </div>
+  <!-- vehicle api BUTTON GREY-->
+  <div class="greytags tags has-addons" id="buttonVehicleGrey">
+    <span class="greyUrl tag_endpoint_large tag ">
+      <span class="verb get greyGet">GET
+        /fleets/{fid}/vehicles/{id}</span>https://api-cert.groupe-psa.com/connectedcar/{version}/fleets/{fid}/vehicles/{id}
+    </span>
+  </div>
+
+  <!-- RELOAD BUTTON GREY-->
+  <div class="tags has-addons" id="buttonReloadGrey">
+    <span class="greyUrl tag_endpoint_large tag">&nbsp;&nbsp;&nbsp; <span class="icon is-small is-white"> <i
+          class="fas fa-redo-alt"></i></span>&nbsp;&nbsp; Reload! </span>
+  </div>
+  <!-- RELOAD BUTTON COLOR-->
+  <a class="tags has-addons" onclick="reload()" id="buttonReloadColor" style="display: none">
+    <span class="tag_endpoint_large tag is-info">&nbsp;&nbsp;&nbsp; <span class=" icon is-small is-white"> <i
+          class="fas fa-redo-alt"></i></span>&nbsp;&nbsp; Reload! </span>
+  </a>
+  <!--Tiles -->
+  <div class="tile is-ancestor">
+    <div class="tile is-parent">
+        <article id="map" class="tile is-child">
+        </article>
+    </div>
+    <div class="tile is-parent">
+        <article class="tile is-child">
+          <div class="language-shell highlighter-rouge">
+            <div class="highlight">
+              <!-- empty payload -->
+              <pre class="highlight" id="emptyPayload"><code><span class="p">&nbsp;</span>
+<span class="p">{</span>
+<span class="p">&nbsp;</span>
+<span class="p">&nbsp;</span>
+<span class="p">&nbsp;</span>
+<span class="p">&nbsp;</span>
+<span class="p">&nbsp;</span>
+<span class="p">&nbsp;</span>
+<span class="p">&nbsp;</span>
+<span class="p">&nbsp;</span>
+<span class="p">&nbsp;</span>
+<span class="p">&nbsp;</span>
+<span class="p">}</span>
+<span class="p">&nbsp;</span>
+<span class="p">&nbsp;</span>
+<span class="p">&nbsp;</span>
+<span class="p">&nbsp;</span>
+<span class="p">&nbsp;</span>
+<span class="p">&nbsp;</span>
+<span class="p">&nbsp;</span>
+                </code></pre>
+              <!-- / empty payload --> 
+              <!-- status payload -->
+<pre class="highlight" id="statusPayload" style="display: none;"><code><span class="p">https://api-cert.groupe-psa.com/connectedcar/{version}/fleets/{fid}/vehicles/{id}/status</span>
+  
+  <span class="p">{</span><span class="w">
+    </span><span class="s2">"lastPosition"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Feature"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"geometry"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Point"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="mf">2.2221432</span><span class="p">,</span><span class="w">
+          </span><span class="mf">48.772476</span><span class="p">,</span><span class="w">
+          </span><span class="mi">172</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Wed Sep 25 16:16:20 GMT 2019"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Aquire"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"signalQuality"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"preconditionning"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"airConditioning"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Wed Sep 25 16:15:37 GMT 2019"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Disabled"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"programs"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"recurrence"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Daily"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PT0S"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"recurrence"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Daily"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PT0S"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"recurrence"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Daily"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PT0S"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"recurrence"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Daily"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PT0S"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"energy"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Electric"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"level"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"autonomy"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"residual"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fuel"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"level"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"residual"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Wed Sep 25 15:40:46 GMT 2019"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"autonomy"</span><span class="p">:</span><span class="w"> </span><span class="mi">2000</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ignition"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Wed Sep 25 15:40:46 GMT 2019"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"vin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VF3A12BCDEF3456"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"privacy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Wed Sep 25 15:40:46 GMT 2019"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"None"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"battery"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"voltage"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.55</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"current"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.55</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Wed Sep 25 15:40:46 GMT 2019"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"kinetic"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Wed Sep 25 15:40:46 GMT 2019"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"acceleration"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.55</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"speed"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.55</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"pace"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.55</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"moving"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"_links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"fleet"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api-cert.groupe-psa.com/connectedcar/{version}/{fid}"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"self"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api-cert.groupe-psa.com/connectedcar/{version}/fleets/{fid}/vehicles/{id}/status"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"vehicles"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api-cert.groupe-psa.com/connectedcar/{version}/fleets/{fid}/vehicles/{id}"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w"></span></code>
+</pre>
+<!-- vehicleId payload -->
+<pre class="highlight" id="vehicleIdPayload" style="display: none;"><code><span class="p">GET https://api-cert.groupe-psa.com/connectedcar/{version}/fleets/{fid}/vehicles/{id}</span>
+ 
+  <span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XA143Z2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"vin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VR3ATTENTJY186916"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Peugeot"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"406 1.9 TD90 SL Clim"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"pictures"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"https://groupe-psa.com/508/view1"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"https://groupe-psa.com/508/view2"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"https://groupe-psa.com/508/view3"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"https://groupe-psa.com/508/view4"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"https://groupe-psa.com/508/view5"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"https://groupe-psa.com/508/view6"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"https://groupe-psa.com/508/view7"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"https://groupe-psa.com/508/view8"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"https://groupe-psa.com/508/view9"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"https://groupe-psa.com/508/view10"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"https://groupe-psa.com/508/view11"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"https://groupe-psa.com/508/view12"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"_links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"self"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api-cert.groupe-psa.com/connectedcar/{version}/fleets/{fid}/vehicles/{id}"</span><span class="w">
+      </span><span class="s2">"alerts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"trips"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api-cert.groupe-psa.com/connectedcar/{version}/fleets/{fid}/vehicles/{id}/trips"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"lastPosition"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api-cert.groupe-psa.com/connectedcar/{version}/fleets/{fid}/vehicles/{id}/lastPosition"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"telemetry"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api-cert.groupe-psa.com/connectedcar/{version}/fleets/{fid}/vehicles/{id}/telemetry"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"maitenance"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api-cert.groupe-psa.com/connectedcar/{version}/fleets/{fid}/vehicles/{id}/maintenance"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api-cert.groupe-psa.com/connectedcar/{version}/fleets/{fid}/vehicles/{id}/status"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w"></span></code>
+</pre>
+<!-- /vehicleId payload -->
+      </div>
+    </div>
+  </article>
+  </div>
+</div>
+<!-- read the doc -->
+<div class="field is-centered is-grouped">
+  <p class="control">
+    
+    <a href="/webapi/b2b/overview/about/" class="button is-psablue is-large">
+    
+      <span class="icon is-large is-white is-hidden-mobile">
+          <i class="fas fa-book"></i>
+      </span>
+      <span>
+          Read the doc
+      </span>
+    </a>
+  </p>
+</div>
+
+  
+</div> 
+
+<!-- /read the doc -->
+        
+      <div>
+    </main>
+        
+    
+  </div>
+</section><footer class="footer">
+    <div class="footer-items">
+        <!-- THIS WEBSITE -->
+        <div class="footer-item">
+        <p class="footer-heading">THIS WEBSITE</p>
+        <div class="footer-links">
+            <a class="footer-link" href="/changelog/#page-title">
+            <span class="icon is-white">
+                <i class="fas fa-code-branch"></i>
+            </span>
+            Website v11.0.0
+            </a>
+            <a class="footer-link" href="/credits/">
+            <span class="icon is-white">
+                <i class="fas fa-paperclip"></i>
+            </span>
+                Credits</a>
+            <a class="footer-link" href="/contact-us/">
+            <span class="icon is-white">
+                <i class="far fa-envelope"></i>
+            </span>
+            <span>
+                Contact Us!
+            </span>
+            </a>
+            <span class="footer-link">
+            <span class="icon is-white">
+                <i class="far fa-copyright"></i>
+            </span>
+            Stellantis 2023
+            </span>
+        </div>
+        </div>
+        <!-- /THIS WEBSITE -->
+        <!-- APIs -->
+        <div class="footer-item">
+        <p class="footer-heading">API</p>
+        <div class="footer-links">
+            <a class="footer-link" href="/webapi/b2b/">API Fleet Owner</a>
+            <a class="footer-link" href="/webapi/b2c/">API End User</a>
+            <a class="footer-link" href="/webportal/v1/">Webportal v1</a>
+            <a class="footer-link" href="/webportal/v2/">Webportal v2</a>
+            <a class="footer-link" href="/mobile-sdk/">Mobile SDK</a>
+        </div>
+        </div>
+        <!-- /APIs -->
+        <!-- OTHER WEBSITES -->
+        <div class="footer-item">
+        <p class="footer-heading">OUR WEBSITES</p>
+        <div class="footer-links">
+            <a class="footer-link" href="https://www.stellantis.com/">Stellantis</a>
+            <a class="footer-link" href="https://www.groupe-psa.com/en/">PSA Groupe</a>
+            <a class="footer-link" href="https://developer.groupe-psa.com/">API Subscription</a>
+            <a class="footer-link" href="https://www.free2move.com/">Free 2 Move</a>
+        </div>
+        </div>
+        <!-- /OTHER WEBSITES -->
+        <!-- SOCIAL -->
+        <div class="footer-item">
+        <p class="footer-heading">SOCIAL</p>
+        <div class="footer-links">
+            <a class="footer-link" href="https://twitter.com/stellantis" target="_blank">
+            <span class="icon is-white">
+                <i class="fab fa-twitter"></i>
+            </span>
+            <span>
+                Twitter
+            </span>
+            </a>
+            <a class="footer-link" href="https://www.linkedin.com/company/stellantis" target="_blank">
+            <span class="icon is-white">
+                <i class="fab fa-linkedin "></i>
+            </span>
+            <span>
+                LinkedIn
+            </span>
+            </a>
+            <a class="footer-link" href="https://www.facebook.com/Stellantis/" target="_blank">
+            <span class="icon is-white">
+                <i class="fab fa-facebook "></i>
+            </span>
+            <span>
+                Facebook
+            </span>
+            </a>
+            <a class="footer-link" href="https://www.youtube.com/c/Stellantis_official/" target="_blank">
+            <span class="icon is-white">
+                <i class="fab fa-youtube  is-white"></i>
+            </span>
+            <span>
+                YouTube
+            </span>
+            </a>
+            <a class="footer-link" href="https://github.com/GroupePSA" target="_blank">
+            <span class="icon is-white">
+                <i class="fab fa-github  is-white"></i>
+            </span>
+            <span>
+                GitHub
+            </span>
+            </a>            
+        </div>
+        </div>
+        <!-- /SOCIAL -->
+    </div>
+    </footer></body>
+</html>
